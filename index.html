@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+    <select class="custom-select" style="color:black;" name="cl1" id="cl1">
+        <option value="" selected style="background:white; color:black;">-</option>
+        <option value="0" style="background:black; color:white;">0</option>
+        <option value="1" style="background:brown; color:white;">1</option>
+        <option value="2" style="background:red; color:white;">2</option>
+        <option value="3" style="background:orange; color:white;">3</option>
+        <option value="4" style="background:yellow; color:black;">4</option>
+        <option value="5" style="background:green; color:white;">5</option>
+        <option value="6" style="background:blue; color:white;">6</option>
+        <option value="7" style="background:purple; color:white;">7</option>
+        <option value="8" style="background:gray; color:white;">8</option>
+        <option value="9" style="background:white; color:black">9</option>
+      </select>
+
+      <select class="custom-select" style="color:black;" name="cl2" id="cl2">
+        <option value="" selected style="background:white; color:black;">-</option>
+        <option value="0" style="background:black; color:white;">0</option>
+        <option value="1" style="background:brown; color:white;">1</option>
+        <option value="2" style="background:red; color:white;">2</option>
+        <option value="3" style="background:orange; color:white;">3</option>
+        <option value="4" style="background:yellow; color:black;">4</option>
+        <option value="5" style="background:green; color:white;">5</option>
+        <option value="6" style="background:blue; color:white;">6</option>
+        <option value="7" style="background:purple; color:white;">7</option>
+        <option value="8" style="background:gray; color:white;">8</option>
+        <option value="9" style="background:white; color:black">9</option>
+      </select>
+
+      <select class="custom-select" style="color:black;" name="cl3" id="cl3">
+        <option value="" selected style="background:white; color:black;">-</option>
+        <option value="0" style="background:black; color:white;">0</option>
+        <option value="1" style="background:brown; color:white;">1</option>
+        <option value="2" style="background:red; color:white;">2</option>
+        <option value="3" style="background:orange; color:white;">3</option>
+        <option value="4" style="background:yellow; color:black;">4</option>
+        <option value="5" style="background:green; color:white;">5</option>
+        <option value="6" style="background:blue; color:white;">6</option>
+        <option value="7" style="background:purple; color:white;">7</option>
+        <option value="8" style="background:gray; color:white;">8</option>
+        <option value="9" style="background:white; color:black">9</option>
+      </select>
+
+      <select class="custom-select" style="color:black;" name="mul" id="mul">
+        <option value="1" style="background:black; color:white;">x 1 Ω</option>
+        <option value="10" style="background:brown; color:white;">x 10 Ω</option>
+        <option value="100" style="background:red; color:white;">x 100 Ω</option>
+        <option value="1000" style="background:orange; color:white;">x 1k Ω</option>
+        <option value="10000" style="background:yellow; color:black;">x 10k Ω</option>
+        <option value="100000" style="background:green; color:white;">x 100k Ω</option>
+        <option value="1000000" style="background:blue; color:white;">x 1M Ω</option>
+        <option value="10000000" style="background:purple; color:white;">x 10M Ω</option>
+        <option value="0.1" style="background:gold; color:black">x 0.1 Ω</option>
+        <option value="0.01" style="background:silver; color:black">x 0.01 Ω</option>
+
+      </select>
+      <select class="custom-select" style="color:black;">
+        <option value="1" style="background:brown; color:white;">± 1%</option>
+        <option value="2" style="background:red; color:white;">± 2%</option>
+        <option value="5" style="background:green; color:white;">± 0.5%</option>
+        <option value="6" style="background:blue; color:white;">± 0.25%</option>
+        <option value="7" style="background:purple; color:white;">± 0.10%</option>
+        <option value="8" style="background:gray; color:white;">± 0.05%</option>
+      </select>
+      <br>
+    <input id="resul">
+    <hr>
+    <!-- <input />
+    <input /> -->
+
+    </div>
+
+      <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+
+  $(document).on('change', '#cl1', function(event) {
+    valorResis();
+    $('#cl1').css('background', color($("#cl1 option:selected").val()));
+    $('#cl1').css('color', 'white');
+  });
+  $(document).on('change', '#cl2', function(event) {
+    valorResis();
+    $('#cl2').css('background', color($("#cl2 option:selected").val()));
+    $('#cl2').css('color', 'white');
+
+  });
+  $(document).on('change', '#cl3', function(event) {
+    valorResis();
+    $('#cl3').css('background', color($("#cl3 option:selected").val()));
+    $('#cl3').css('color', 'white');
+  });
+  
+  $(document).on('change', '#mul', function(event) {
+    valorResis();
+    $('#mul').css('background', colorMul($("#mul option:selected").val()));
+    $('#mul').css('color', 'white');
+  });
+
+  function color(num){
+    c='';
+    switch(num){
+      case '0': c='black';
+      break;
+      case '1': c='brown';
+      break;
+      case '2': c='red';
+      break;
+      case '3': c='orange';
+      break;
+      case '4': c='yellow';
+      break;
+      case '5': c='green';
+      break;
+      case '6': c='blue';
+      break;
+      case '7': c='purple';
+      break;
+      case '8': c='gray';
+      break;
+      case '9': c='white';
+      break;
+      default:
+      break;
+    }
+    return c;
+  }
+
+  function colorMul(num){
+    c='';
+    switch(num){
+      case '1': c='black';
+      break;
+      case '10': c='brown';
+      break;
+      case '100': c='red';
+      break;
+      case '1000': c='orange';
+      break;
+      case '10000': c='yellow';
+      break;
+      case '100000': c='green';
+      break;
+      case '1000000': c='blue';
+      break;
+      case '10000000': c='purple';
+      break;
+      case '0.1': c='gold';
+      break;
+      case '0.01': c='silver';
+      break;
+      default:
+      break;
+    }
+    return c;
+  }
+
+  function valorResis(){
+    res='';
+    res+=$("#cl1 option:selected").val();
+    res+=$("#cl2 option:selected").val();
+    res+=$("#cl3 option:selected").val();
+    mul=$("#mul option:selected").val();
+    num=res*mul;
+    r = num.toLocaleString('en');
+    $('#resul').val(r+' Ω');
+  }
+
+</script>
+</body>
+
+
+</html>
+
+
